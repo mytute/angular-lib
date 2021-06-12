@@ -81,3 +81,27 @@ change package.json version to upper && re-publish it.
 ```bash
 $ npm publish
 ```
+### encapsulation
+use "encapsulation" property when styles, class in components.(not in separate file)
+```javascript
+@Component({
+  selector: 'ng-upload-image',
+  template: `
+    <p>
+      ng-upload-image works!
+    </p>
+    `,
+  styles: [
+    `.mark{background-color: red}`
+  ],
+  encapsulation:ViewEncapsulation.None
+})
+export class NgUploadImageComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+```
